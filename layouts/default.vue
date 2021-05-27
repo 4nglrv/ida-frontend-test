@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters, mapMutations } from "vuex";
 import Category from "~/components/category/category"
 
 export default {
@@ -60,11 +60,16 @@ export default {
     }
   },
   methods: {
+    ...mapMutations(
+      'products', ['sortByPopular', 'sortByPrice']
+    ),
     setDropdown() {
       this.dropdown.isShow = !this.dropdown.isShow
     },
     setBySort(str) {
       this.dropdown.bySort = str
+      if(str === 'цене') this.sortByPrice()
+      if(str === 'популярности') this.sortByPopular()
       this.dropdown.isShow = false
     },
   },

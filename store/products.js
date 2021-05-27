@@ -30,11 +30,30 @@ export const mutations = {
         return
       }
     }
+    const sortStuffByPrice = obj.stuff.sort((a, b) => {
+      return a.price > b.price ? -1 : 1
+    })
     state.products.push({
       id: obj.idCategory,
-      stuff: obj.stuff
+      stuff: sortStuffByPrice
     })
     state.loading = false
+  },
+
+  sortByPopular(state) {
+    for (let index in state.products) {
+      state.products[index].stuff.sort((a, b) => {
+        return a.rating > b.rating ? -1 : 1
+      })
+    }
+  },
+
+  sortByPrice(state) {
+    for (let index in state.products) {
+      state.products[index].stuff.sort((a, b) => {
+        return a.price > b.price ? -1 : 1
+      })
+    }
   }
 }
 
