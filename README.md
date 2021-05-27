@@ -1,7 +1,7 @@
 # ida-frontend-test
 
 ## Routes
-
+idCategory: 1,2,3,4
 ```
 localhost:3000/{idCategory}
 ```
