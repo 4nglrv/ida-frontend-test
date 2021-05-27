@@ -1,5 +1,11 @@
 # ida-frontend-test
 
+## Routes
+
+```
+localhost:3000/{idCategory}
+```
+
 ## Build Setup
 
 ```bash
