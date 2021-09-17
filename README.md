@@ -23,4 +23,5 @@ $ yarn start
 $ yarn generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+## UI
+<img src="https://i.ibb.co/6RTpf7K/image.png" alt="image" border="0">
